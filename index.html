@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Shreeya Vadlamannati</title>
+  <meta name="claude:viewport-fit-sides" content="cover">
+  <meta name="description" content="Shreeya Vadlamannati — Honours Mathematics at the University of Waterloo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600;700&family=DM+Mono:wght@400;500&family=Figtree:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ============ OPENING: a seed sprouts and blooms ============ -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <svg class="sprout" id="sprout" viewBox="0 0 240 340">
+      <path class="stem" d="M120 340 C120 290 104 262 116 220 C126 186 120 160 120 128"/>
+      <path class="leaf leaf-l" d="M116 236 C88 232 70 212 66 190 C92 192 110 208 116 236Z"/>
+      <path class="leaf leaf-r" d="M118 196 C146 194 166 176 172 152 C144 154 124 170 118 196Z"/>
+      <g class="bloom" transform="translate(120 112)">
+        <g class="petals"></g>
+        <circle class="core" r="15"/>
+      </g>
+    </svg>
+    <p class="intro-word" id="introWord"><span>planting</span> <em>ideas</em></p>
+    <div class="intro-burst" id="introBurst"></div>
+    <button class="intro-skip mono" id="introSkip">Skip intro →</button>
+  </div>
+
+  <canvas class="petal-sky" id="petalSky" aria-hidden="true"></canvas>
+
+  <header class="topbar" id="topbar">
+    <div class="wrap topbar-inner">
+      <button class="brand" data-nav="home" aria-label="Back to top"><span class="brand-flower" aria-hidden="true">✿</span>Shreeya</button>
+      <nav class="mainnav" id="mainNav">
+        <button data-nav="about">About</button>
+        <button data-nav="experience">Experience</button>
+        <button data-nav="toolkit">Toolkit</button>
+        <button data-nav="work">Work</button>
+        <button data-nav="play">Play</button>
+        <button data-nav="blog">Journal</button>
+      </nav>
+      <button class="pill" data-nav="contact">Say hello</button>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">Menu</button>
+    </div>
+  </header>
+
+  <!-- ============ HOME VIEW ============ -->
+  <div id="homeView">
+    <section class="hero" id="home">
+      <div class="hero-stage">
+        <h1 class="hero-name" id="heroName" aria-label="Shreeya Vadlamannati">SHREEYA</h1>
+        <p class="hero-sign" aria-hidden="true">Shreeya</p>
+      </div>
+      <p class="hero-line">Honours Mathematics at the University of Waterloo. I grow ideas into things people use.</p>
+
+      <div class="board" id="board">
+        <div class="board-top">
+          <span class="board-led" aria-hidden="true"></span>
+          <div class="screen" aria-live="polite"><span class="mono" id="screenText"></span><i class="caret"></i></div>
+          <span class="board-label mono">bloom-01</span>
+        </div>
+        <div class="keys keys-name" id="nameKeys"></div>
+        <div class="keys keys-nav">
+          <button class="key key-wide" data-nav="about" data-say="about me">About</button>
+          <button class="key key-wide" data-nav="work" data-say="my projects">Work</button>
+          <button class="key key-wide" data-nav="play" data-say="let's play">Play</button>
+          <button class="key key-wide" data-nav="blog" data-say="my journal">Journal</button>
+          <button class="key key-wide key-enter" data-nav="contact" data-say="say hello">Hello ↵</button>
+        </div>
+        <p class="board-hint mono">Press a letter to plant a flower · or type on your keyboard</p>
+      </div>
+
+      <div class="garden" id="garden" aria-hidden="true"></div>
+    </section>
+
+    <!-- ABOUT: herbarium sheet -->
+    <section class="section" id="about">
+      <div class="wrap about-grid">
+        <figure class="specimen">
+          <div class="specimen-art" id="specimenArt" aria-hidden="true"></div>
+          <figcaption class="specimen-label">
+            <p class="mono specimen-no">Specimen No. 2026 · Herbarium of Shreeya</p>
+            <dl>
+              <div><dt>Name</dt><dd>Shreeya Vadlamannati</dd></div>
+              <div><dt>Collected</dt><dd>Calgary, Alberta</dd></div>
+              <div><dt>Now growing</dt><dd>University of Waterloo</dd></div>
+              <div><dt>Field</dt><dd>Bachelor of Mathematics (Honours), 2026 – 2031</dd></div>
+              <div><dt>Speaks</dt><dd>English, Hindi</dd></div>
+            </dl>
+          </figcaption>
+        </figure>
+        <div class="about-copy">
+          <p class="eyebrow mono">About</p>
+          <h2 class="title">Hi, I'm Shreeya. I like ideas that <em>take root.</em></h2>
+          <p>I'm an incoming Honours Mathematics student at the University of Waterloo. Most of what I've built started with a community I care about.</p>
+          <p>Lately I've been building Face Control, a cursor you move with your head, and worked with a team on QuBench, quantum-fair jury selection for IBM Qiskit Fall Fest. Before that, I led a mentor-matching platform for newcomers in Calgary, inspired by my own experience of finding my feet in a new place. I've taught coding, reading and math to young learners at the Calgary Public Library, and helped run an international youth advisory board spanning Canada, the U.S. and Uganda. I also write Python, C++ and Racket, and build 3D scenes in Autodesk Maya.</p>
+          <div class="stats">
+            <div><b class="count" data-to="350">350</b><span>young learners introduced to coding</span></div>
+            <div><b class="count" data-to="250" data-suffix="+">250+</b><span>volunteer hours at Youth Central</span></div>
+            <div><b class="count" data-to="2500" data-prefix="$">$2,500</b><span>in grants to youth projects</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE: a growing vine -->
+    <section class="section section-soft" id="experience">
+      <div class="wrap">
+        <p class="eyebrow mono">Experience</p>
+        <h2 class="title">Where I've been <em>growing</em></h2>
+        <div class="vine-wrap">
+          <svg class="vine" id="vine" viewBox="0 0 40 1000" preserveAspectRatio="none" aria-hidden="true">
+            <path id="vinePath" d="M20 0 C34 80 6 160 20 240 C34 320 6 400 20 480 C34 560 6 640 20 720 C34 800 6 880 20 1000"/>
+          </svg>
+          <ol class="seasons" id="seasons"></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLKIT: seed packets -->
+    <section class="section" id="toolkit">
+      <div class="wrap">
+        <p class="eyebrow mono">Toolkit</p>
+        <h2 class="title">My <em>seed packets</em></h2>
+        <p class="section-note">Hover or tap a packet to see what's inside.</p>
+        <div class="packets" id="packets"></div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="section section-soft" id="work">
+      <div class="wrap">
+        <p class="eyebrow mono">Work</p>
+        <h2 class="title">Things I've <em>made</em></h2>
+
+        <article class="feature" data-project="2">
+          <div class="feature-media" id="featureMedia">
+            <img src="assets/pirate-den.webp" alt="Rendered 3D diorama of a pirate den: a wooden house with a ship's wheel on stilts over green water, docks with barrels, cannons and rowing boats, palm trees and tall cliffs." width="1014" height="900">
+            <span class="feature-tag mono">Autodesk Maya · 3D</span>
+          </div>
+          <div class="feature-copy">
+            <p class="eyebrow mono">Featured build</p>
+            <h3>Pirate Den 3D Environment</h3>
+            <p>I designed and built this pirate den in Autodesk Maya, from first concept to the finished model: the stilted house with its ship's wheel, the docks, barrels and cannons, the rowing boats and the cliffs around the cove.</p>
+            <button class="pill pill-solid">Open project +</button>
+          </div>
+        </article>
+
+        <div class="projects" id="projects"></div>
+      </div>
+    </section>
+
+    <!-- PLAY -->
+    <section class="section" id="play">
+      <div class="wrap">
+        <p class="eyebrow mono">Play</p>
+        <div class="play-head">
+          <h2 class="title">Sum <em>sprint</em></h2>
+          <p class="section-note">45 seconds of mental maths. Each right answer adds a petal to your flower. Answers lock in as soon as you type the right number; a wrong one costs two seconds.</p>
+        </div>
+        <div class="sprint" id="sprint">
+          <div class="sprint-hud mono">
+            <div><span>Score</span><b id="sScore">0</b></div>
+            <div><span>Streak</span><b id="sStreak">×1</b></div>
+            <div><span>Solved</span><b id="sSolved">0</b></div>
+            <div><span>Best</span><b id="sBest">0</b></div>
+          </div>
+          <div class="sprint-time"><i id="sTime"></i></div>
+          <div class="sprint-main">
+            <div class="sprint-flower" id="sFlower" aria-hidden="true"></div>
+            <div class="sprint-board">
+              <p class="sprint-level mono" id="sLevel">Level 1 · seedling</p>
+              <p class="sprint-q" id="sQ">7 + 5</p>
+              <p class="sprint-a" id="sA"><span id="sInput">?</span></p>
+              <p class="sprint-flash mono" id="sFlash">&nbsp;</p>
+            </div>
+            <div class="keypad" id="keypad"></div>
+          </div>
+          <div class="sprint-overlay" id="sOverlay">
+            <p class="mono sprint-tag" id="sTag">Ready?</p>
+            <p class="sprint-title" id="sTitle">Grow a flower with <em>maths</em></p>
+            <p class="sprint-sub" id="sSub">Type with your keyboard or tap the keypad.</p>
+            <button class="pill pill-solid" id="sStart">Start sprint</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOURNAL (latest) -->
+    <section class="section section-soft" id="latest">
+      <div class="wrap">
+        <p class="eyebrow mono">Journal</p>
+        <div class="latest-head">
+          <h2 class="title">Fresh from the <em>journal</em></h2>
+          <button class="pill" data-nav="blog">All posts →</button>
+        </div>
+        <div class="post-grid" id="latestPosts"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="wrap">
+        <p class="eyebrow mono">Contact</p>
+        <h2 class="title contact-title">Let's grow <em>something</em> together.</h2>
+        <p class="contact-lead">Questions about math, volunteering, or a project you'd like a hand with? My inbox is open.</p>
+        <div class="contact-row">
+          <a class="contact-mail" id="emailText" href="mailto:s2vadlam@uwaterloo.ca">s2vadlam@uwaterloo.ca</a>
+          <button class="pill" id="copyEmail">Copy email</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ============ JOURNAL VIEW ============ -->
+  <div id="blogView" hidden>
+    <section class="section blog-top">
+      <div class="wrap">
+        <button class="back mono" data-nav="home">← Back home</button>
+        <p class="eyebrow mono">Journal</p>
+        <div class="latest-head">
+          <h2 class="title">Notes &amp; <em>stories</em></h2>
+          <button class="pill pill-solid" id="newPostBtn" hidden>+ New post</button>
+        </div>
+        <p class="section-note" id="blogIntro">Things I'm learning, building and thinking about.</p>
+
+        <form class="editor" id="editor" hidden>
+          <p class="eyebrow mono" id="editorMode">New post</p>
+          <label for="postTitle">Title</label>
+          <input id="postTitle" maxlength="140" required placeholder="My first week at Waterloo">
+          <label for="postTags">Tags <small>(comma separated)</small></label>
+          <input id="postTags" maxlength="120" placeholder="university, math">
+          <label for="postBody">Post</label>
+          <textarea id="postBody" rows="12" required placeholder="Write here. Leave a blank line between paragraphs.&#10;## A heading&#10;**bold**, *italic*, - list items, [a link](https://example.com)"></textarea>
+          <div class="editor-actions">
+            <button type="button" class="pill" id="previewBtn">Preview</button>
+            <span class="grow"></span>
+            <span class="editor-status" id="editorStatus" role="status"></span>
+            <button type="button" class="pill" id="cancelEdit">Cancel</button>
+            <button type="submit" class="pill pill-solid" id="savePost">Publish post</button>
+          </div>
+          <div class="post-body preview" id="previewBox" hidden></div>
+        </form>
+
+        <div class="post-list" id="postList"></div>
+      </div>
+    </section>
+  </div>
+
+  <div id="postView" hidden>
+    <article class="section blog-top">
+      <div class="wrap narrow">
+        <button class="back mono" data-nav="blog">← All posts</button>
+        <div id="postFull"></div>
+      </div>
+    </article>
+  </div>
+
+  <footer class="footer">
+    <div class="wrap footer-inner mono">
+      <span>© 2026 Shreeya Vadlamannati</span>
+      <span>Grown in Waterloo, ON</span>
+      <button data-nav="home">Back to top ↑</button>
+    </div>
+  </footer>
+
+  <!-- project detail panel -->
+  <div class="sheet" id="sheet" hidden>
+    <div class="sheet-backdrop" data-close></div>
+    <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+      <button class="sheet-close mono" data-close>Close ✕</button>
+      <div id="sheetBody"></div>
+    </div>
+  </div>
+
+  <div class="burst-layer" id="burst" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>
